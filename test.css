@@ -1,0 +1,15 @@
+.jumbotron {
+  background-image:url('img/jumbotron.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.jumbotron h1 {
+  color: #eea;
+  font-size: 48px;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+
