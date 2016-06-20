@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>
+        Javascript Testing
+    </title>
+    <link rel="stylesheet" href="bootstrap.css"/>
+</head>
+
+<body>
+
+    <h1>Javascript Testing</h1>
+
+    <img src="img/pic_bulboff.gif" class="col-md-1" id="myImage" onclick="changeImage()">
+
+    <p>Click the image to change it</p>
+
+    <script>
+
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            
+            if (image.src.match("off")) {
+                image.src = "img/pic_bulbon.gif";
+            } else {
+                image.src = "img/pic_bulboff.gif";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
