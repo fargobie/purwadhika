@@ -1,4 +1,4 @@
-# purwadhika
-Startup Fast Track Program
+# Purwadhika IT Entrepreneur School - www.purwadhika.com
+# Startup Fast Track Program
 Class: Front-End Web App Development
-Materials for teaching with sample coding for Purwadhika IT Entrepreneur School - www.purwadhika.com
+Materials for teaching with sample coding in HTML, CSS, JS and AngularJS
