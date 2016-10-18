@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6s6SRHQhKa5f4kXNwp64K1MHM3hLvvWk"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        $(document).ready(function(){
+
+                $.getJSON( "https://api.myjson.com/bins/3ozp6", function( data ) {
+                    var items = [];
+                    var coords = [];
+                    $.each( data.search_results, function( key, val ) {
+                        items.push( "<div class='col-lg-6' id='" + key + "'>" + "<div id='infocontainer'><img id='infoimg' src=" + val.listing.picture_url + " class='img-responsive'><div id='infotext'><h4>"+val.listing.name+"</h4><p>" + val.listing.room_type + "&nbsp;&middot;&nbsp;" + val.listing.person_capacity + "&nbsp;guests" + "</p></div><div id='price'><h3><sup>" + val.pricing_quote.localized_currency + "</sup>&nbsp;"+ val.pricing_quote.localized_nightly_price + "&nbsp;<small>per night</small></h3></div></div></div>" );
+                        $("#map").addMarker({
+                            coords: [val.listing.lat, val.listing.lng]
+                        });
+                    });                   
+                    $( "<div/>", {
+                        "class": "row",
+                        html: items.join( "" )
+                    }).appendTo( "#results" );
+                });
+
+        });
+</script>
+    <style>
+        #price {
+            position: absolute;
+            bottom: 30%;
+            background-color: #333333;
+            color: white;
+            padding: 0px 10px;
+        }
+        
+        #infocontainer {
+            height: 400px;
+            width: 450px;
+            margin:10px;
+        }
+        
+        #infotext {
+            height: 20%;
+        }
+        
+        #infoimg {
+            height: 80%;
+            overflow: hidden;
+        }
+        
+        #map {
+            width: 33.33%;
+            height: 1000px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        #results {
+            height:1000px;
+            overflow-y:scroll;
+            margin:0px;
+            padding: 0px 10px;
+        }
+        
+        sup {
+            font-size: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+        <script type="text/javascript">
+            $(function() {
+                $("#map").googleMap();
+                
+                // // Marker 1
+                // $("#map").addMarker({
+                //     coords: [-6.266930822925843, 106.81797230789516]
+                // });
+                
+                // // Marker 2
+                // $("#map").addMarker({
+                //     coords: [-6.254727185327257, 106.85644761199664]
+                // });
+                
+                // // Marker 3
+                // $("#map").addMarker({
+                //     coords: [-6.20759265896578, 106.84464771502552]
+                // });
+
+                // // Marker 4
+                // $("#map").addMarker({
+                //     coords: [-6.150716258333208, 106.8562474848112]
+                // });
+            })
+            </script>
+    </div>
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <div id="results" class="col-xs-8"></div>
+            <div class="col-xs-4"><!--map-canvas will be postioned here--></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

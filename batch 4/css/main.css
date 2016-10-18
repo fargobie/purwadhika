@@ -1,0 +1,89 @@
+.menu {
+  background: rgba(0,0,0,0.2);
+  padding: 10px 0;
+  height: 50px;
+}
+
+.menu li {
+  display:inline;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+}
+
+.jumbotron {
+    background:url("https://a0.muscache.com/airbnb/static/P1F1.jpg") no-repeat;
+    /*add fixed for parallax*/
+    background-size: cover;
+    height: 700px;
+    /*position: absolute;
+    left:0px;
+    top:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;   */
+    margin:0;
+}
+
+.jumbotron .container {
+    position:relative;
+    top:150px;
+    left:50px;
+}
+
+.jumbotron h1 {
+    font-size:60px;
+    font-family: 'Montserrat', sans-serif;
+    color:white;  
+}
+
+.jumbotron p {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron a {
+    color:#00b0ff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.guides {
+    background-color:#f7f7f7;
+    /*position:absolute;
+    top:500px;
+    width:100%;*/
+}
+
+.guides h2 {
+    font-family: 'Montserrat', sans-serif;
+    color:black;  
+}
+
+.guides p {
+    font-family: 'Open Sans', sans-serif;
+    color:black;  
+}
+
+.footer {
+    background-color: #efefef;
+    border-top: 2px solid #dbdbdb;
+    padding-bottom: 20px;
+    /*position:absolute;
+    top:800px;
+    width:100%;*/
+}
+
+.footer h3{
+    font-family: 'Montserrat', sans-serif;
+    color:black;  
+}
+
+.footer p {
+    font-family: 'Open Sans', sans-serif;
+    color:black;  
+}
+
+.footer a {
+    font-family: 'Open Sans', sans-serif;
+    color:#00b0ff;
+}

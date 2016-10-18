@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>jQuery testing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+    </script>
+    <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $(".animate").animate({
+                        left: '250px',
+                        width: '200px',
+                        height: '150px',
+                        opacity: '0.25'
+                    });
+                    $(".demo").animate({
+                        left: '170px',
+                        opacity: '0.5',
+                        fontSize: '5em'
+                    }, 1000)
+                });
+            });
+    </script>
+</head>
+<body>
+    <h1>This is a header</h1>
+    <button>Animate</button>
+    <div class="animate" style="background:yellow;height:100px;width:100px;position:absolute;"></div>
+    <div class="demo" style="color:white;background:#555;height:105px;width:260px;position:relative;">jQuery</div>
+    
+</body>
+
+</html>

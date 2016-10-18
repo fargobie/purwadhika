@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>First JavaScript Page</title>
+    <script src=""></script>
+</head>
+
+<body>
+    <h1>First JavaScript Page</h1>
+    <!--<button onclick="document.write('Purwadhika')">Press Here</button>
+    <p id="demo">Purwadhika</p>-->
+    <!--<button onclick="displayImage()">Press Here</button>-->
+    <img src="img/bulboff.gif" id="myImage" onclick="displayImage()">
+
+    <script type="text/javascript">
+        // var number = 1 + 1;
+        // window.alert(1+100*250)
+        // document.write("Hello World")
+        // document.getElementById("demo").innerHTML = "Hello World";
+        // console.log(number);
+        // console.log(1+2);
+
+        // alert("This is an alert");
+        // confirm("Do you want to confirm?");
+        // var name = prompt("What is your name?",'purwadhika');
+        // document.write('<h2>'+name+'</h2>');
+
+        function displayImage(){
+            var image = document.getElementById('myImage');
+
+            if(image.src.match("off")){
+                image.src = "img/bulbon.gif";
+            } else {
+                image.src = "img/bulboff.gif"
+            }
+        }
+    </script>
+
+
+    
+
+</body>
+
+</html>

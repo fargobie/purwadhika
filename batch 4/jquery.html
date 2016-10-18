@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>JQuery Practice</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#hide").click(function(){
+            //     $("h1").fadeToggle();
+            //     $(".test").fadeToggle();
+            //     $("#test").fadeToggle();
+            // });
+
+            // $("#show").click(function(){
+            //    $("#fade").fadeToggle();
+            // });
+            // $("#flip").click(function(){
+			//     $("#panel").slideToggle("slow");
+		    // });
+            $("button").click(function(){
+                $("div").animate({bottom:'250px'})
+                   .animate({right:'250px'});
+            })
+
+        });
+
+    </script>
+    <!--<div id="fade" style="background-color:red">
+        <h1>This is a large heading</h1>
+        <h2 class="test">This a heading</h2>
+        <p id="test">This is a paragraph</p>
+    </div>
+    <button id="hide">Fade Text</button>
+    <button id="show">Fade Div</button>-->
+
+<!--<style>
+	#panel, #flip {    
+		padding: 5px;    
+		text-align: center;
+		background-color: #e5eecc;
+		border: solid 1px #c3c3c3;
+	}
+	#panel {
+        height: 200px;    
+		padding: 50px;    
+		display: none;
+	}
+</style>-->
+</head>
+<body> 
+	<!--<div id="flip">Click to slide the panel down or 	up</div>
+	<div id="panel">Hello world!</div>-->
+    <button>Animate</button>
+    <div style="background:#333333;height:100px;width:100px;position:absolute;">
+    </div>
+    
+
+</body>
+
+</html>

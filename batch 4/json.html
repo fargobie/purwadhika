@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.getJSON( "https://api.myjson.com/bins/3ozp6", function( data ) {
+                    var items = [];
+                    $.each( data.search_results, function( key, val ) {
+                        items.push( "<li id='" + key + "'>" + val.listing.name+ "</li>" );
+                    });                   
+                    $( "<ul/>", {
+                        "class": "my-new-list",
+                        html: items.join( "" )
+                    }).appendTo( "body" );
+                });
+            });
+        });
+</script>
+</head>
+
+<body>
+
+    <button>Get JSON data</button>
+
+    <div></div>
+
+</body>
+
+</html>
