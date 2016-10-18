@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="js/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6s6SRHQhKa5f4kXNwp64K1MHM3hLvvWk"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+            <div id="map" style="width: 600px; height: 800px;"></div>
+            <script type="text/javascript">
+            $(function() {
+                $("#map").googleMap();
+                $("#map").addMarker({
+                coords: [48.895651, 2.290569], // GPS coords
+                title: 'Marker no1', // Title
+                text:  '<b>Lorem ipsum</b> <img src="img/airbnb-logo.png" height="100">' // HTML content
+                });
+            })
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6s6SRHQhKa5f4kXNwp64K1MHM3hLvvWk"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script>
+            $(document).ready(function(){
+
+                    $.getJSON("https://api.myjson.com/bins/3ozp6", function(data){
+                        var items = [];
+                        var coords = [];
+                        $.each(data.search_results, function(key, val){
+                            items.push("<div class='col-md-6'><div id='resultcontainer'><div id='resultimg'><img src=" + val.listing.picture_url + "></div><div id='resulttext'><h3>" + val.listing.name + "</h3><p>" + val.listing.room_type + "&nbsp;" + val.listing.person_capacity + " guests</p></div><div id='price'><h3><sup>" + val.pricing_quote.localized_currency + "</sup>" + val.pricing_quote.localized_nightly_price + "</h3></div></div></div>");
+                            $("#map").addMarker({
+                                coords: [val.listing.lat, val.listing.lng],
+                                title: '<h3>' + val.listing.name + '</h3>',
+                                text: '<img src=' + val.listing.picture_url + '>'
+                            })
+                        });
+                        $("<div/>", {
+                            "class": "row",
+                            html: items.join("")
+                        }).appendTo("#results");
+                    });
+
+            });
+        </script>
+    <style>
+        #results {
+            width: 66.66%;
+            height:800px;
+            overflow-y:scroll;
+            margin:0px;
+        }
+        
+        #map {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 33.33%;
+            height: 800px;
+        }
+        #resultcontainer {
+            height:300px;
+            width:350px;
+            margin:0px;
+            padding:10px;
+        }
+        #resultimg{
+            height:80%;
+            overflow:hidden;
+        }
+        #resulttext {
+            height:20%;
+        }
+        #price {
+            position:absolute;
+            bottom:30%;
+            background-color:#333333;
+            color:white;
+            padding: 0px 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map">
+        <script type="text/javascript">
+            $(function(){
+                $("#map").googleMap();
+            })
+        </script>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-8" id="results">
+            </div>
+            <div class="col-xs-4">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

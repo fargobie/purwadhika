@@ -13,7 +13,7 @@
                     var items = [];
                     var coords = [];
                     $.each( data.search_results, function( key, val ) {
-                        items.push( "<div class='col-lg-6' id='" + key + "'>" + "<div id='infocontainer'><img id='infoimg' src=" + val.listing.picture_url + " class='img-responsive'><div id='infotext'><h4>"+val.listing.name+"</h4><p>" + val.listing.room_type + "&nbsp;&middot;&nbsp;" + val.listing.person_capacity + "&nbsp;guests" + "</p></div><div id='price'><h3><sup>" + val.pricing_quote.localized_currency + "</sup>&nbsp;"+ val.pricing_quote.localized_nightly_price + "&nbsp;<small>per night</small></h3></div></div></div>" );
+                        items.push( "<div class='col-md-6' id='" + key + "'>" + "<div id='infocontainer'><img id='infoimg' src=" + val.listing.picture_url + " class='img-responsive'><div id='infotext'><h4>"+val.listing.name+"</h4><p>" + val.listing.room_type + "&nbsp;&middot;&nbsp;" + val.listing.person_capacity + "&nbsp;guests" + "</p></div><div id='price'><h3><sup>" + val.pricing_quote.localized_currency + "</sup>&nbsp;"+ val.pricing_quote.localized_nightly_price + "&nbsp;<small>per night</small></h3></div></div></div>" );
                         $("#map").addMarker({
                             coords: [val.listing.lat, val.listing.lng]
                         });
@@ -36,9 +36,10 @@
         }
         
         #infocontainer {
-            height: 400px;
-            width: 450px;
-            margin:10px;
+            height: 300px;
+            width: 350px;
+            margin:0px;
+            padding:0px;
         }
         
         #infotext {
@@ -52,7 +53,7 @@
         
         #map {
             width: 33.33%;
-            height: 1000px;
+            height: 800px;
             position: absolute;
             right: 0px;
             top: 0px;
@@ -61,10 +62,10 @@
         }
 
         #results {
-            height:1000px;
+            height:800px;
             overflow-y:scroll;
             margin:0px;
-            padding: 0px 10px;
+            padding:0px;
         }
         
         sup {
