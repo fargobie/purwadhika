@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="angular.js"></script>
+        <script src="todo.js"></script>
+        <link rel="stylesheet" href="bootstrap.css">
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <div class="container">
+            <h2>To-Do List</h2>
+            <form ng-submit="add()">
+                <input type="text" ng-model="input" size="35">
+                <input type="submit" class="btn btn-success">
+            </form>
+            <div ng-repeat="x in list">
+                <input type="checkbox" ng-model="x.done"> {{x.text}}
+            </div>
+            <button type="button" class="btn btn-default" ng-click="remove()">Remove selected</button>
+        </div>
+    </body>
+</html>

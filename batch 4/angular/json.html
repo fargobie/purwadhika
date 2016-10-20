@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<script src="angular.js"></script>
+	<script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope, $http){
+                $http.get("https://api.myjson.com/bins/3ozp6").then(function(response){
+                    $scope.data = response.data.search_results;
+                })
+            })
+        </script>
+        <link rel="stylesheet" href="bootstrap.css">
+        <style>
+            #image {
+                width:300px;
+                height:250px;
+                overflow:hidden;
+            }
+            #price {
+                position:absolute;
+                bottom: 20%;
+                left: 10px;
+                color: white;
+                background-color: #333333;
+                padding: 0px 10px;
+            }
+        </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div class = "col-md-4" ng-repeat="x in data">
+        <img id="image" ng-src="{{x.listing.picture_url}}">
+		<h4>{{ x.listing.name }}</h4>
+        <p>{{ x.listing.room_type + ' ' + x.listing.person_capacity + ' person' }}</p>
+        <div id="price">
+            <h3>{{x.pricing_quote.localized_nightly_price | currency : 'Rp ' }}</h3>
+        </div>
+	</div>
+</body>
+
+</html>

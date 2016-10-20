@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+	<script src="angular.js"></script>
+	<script src="exercise.js"></script>
+	<link href="bootstrap.css">
+</head>
+
+<body ng-controller="myController">
+	<p>{{ time | date : 'HH:mm:ss' : '+0800' }}</p>
+	<input type="text" ng-model="firstname">
+	<input type="text" ng-model="lastname">
+	<p>{{ fullname() }}</p>
+	<input type="text" ng-model="money">
+	<p> {{ money | currency : 'Rp' }}</p>
+
+	<div class="row">
+		<div class="container">
+			<div class="col-md-2" ng-repeat="x in list">
+				<h2>{{ x.name }}</h2>
+				<p>{{ x.country }}</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
