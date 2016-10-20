@@ -1,0 +1,8 @@
+<div class = "col-md-4" ng-repeat="x in data">
+        <img id="image" ng-src="{{x.listing.picture_url}}">
+		<h4>{{ x.listing.name }}</h4>
+        <p>{{ x.listing.room_type + ' ' + x.listing.person_capacity + ' person' }}</p>
+        <div id="price">
+            <h3>{{x.pricing_quote.localized_nightly_price | currency : 'Rp ' }}</h3>
+        </div>
+</div>
