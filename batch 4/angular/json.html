@@ -4,31 +4,31 @@
 	<script src="angular.js"></script>
 	<script>
             var app = angular.module('myApp', []);
-            app.controller('myCtrl', function($scope, $http){
+            app.controller('SearchController', function($scope, $http){
                 $http.get("https://api.myjson.com/bins/3ozp6").then(function(response){
                     $scope.data = response.data.search_results;
-                })
-            })
+                });
+            });
         </script>
         <link rel="stylesheet" href="bootstrap.css">
         <style>
             #image {
-                width:300px;
+                width:100%;
                 height:250px;
                 overflow:hidden;
             }
             #price {
                 position:absolute;
                 bottom: 20%;
-                left: 10px;
+                left: 20px;
                 color: white;
                 background-color: #333333;
-                padding: 0px 10px;
+                padding: 0px;
             }
         </style>
 </head>
 
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-app="myApp" ng-controller="SearchController">
 	<div class = "col-md-4" ng-repeat="x in data">
         <img id="image" ng-src="{{x.listing.picture_url}}">
 		<h4>{{ x.listing.name }}</h4>
