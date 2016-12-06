@@ -4,17 +4,20 @@
 <head>
     <script src="angular.js"></script>
     <script src="app.js"></script>
+    <script>
+    var app = angular.module("myApp", []);
+    app.directive("testDirective", function() {
+        return {
+            template : "<h2>Made by a directive!</h2>"
+        };
+    });
+    </script>
 </head>
 
 <body ng-app="myApp">
-<script>
-var app = angular.module("myApp", []);
-app.directive("testDirective", function() {
-    return {
-        template : "<h1>Made by a directive!</h1>"
-    };
-});
-</script>
+
+    <test-directive></test-directive>
+
 </body>
 
 </html>
