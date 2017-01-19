@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Bootstrap Jumbotron</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <style>
+        .jumbotron {
+            margin-top: -30px;
+            color: #fff;
+            background: url('http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg') center;
+            background-size: cover;
+            height:500px;
+        }
+        .jumbotron .container {
+            padding-top: 100px;
+            padding-left: 60px;
+        }
+        .fa-code {
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Purwadhika</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products & Services</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Password">
+                    <button type="submit" class="btn btn-success">Log In</button>
+                </form>
+            </div>   
+        </nav>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Welcome to Purwadhika</h1>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                <a class="btn btn-primary btn-lg" href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i id="code" class="fa fa-code fa-spin fa-5x" aria-hidden="true"></i>
+                        <h2>Coding</h2>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                        <a class ="btn btn-default" href="#">Learn More</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-spinner fa-spin fa-5x"></i>
+                        <h2>Training</h2>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                        <a class ="btn btn-default" href="#">Learn More</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <span class="fa-stack fa-spin fa-5x">
+                            <i class="fa fa-square fa-stack-2x"></i>
+                            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h2>IoT</h2>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                        <!--<div class="dropdown">
+                            <button class ="btn btn-info btn-block dropdown-toggle" type="button" data-toggle="dropdown">dropdown</button>
+                            <ul class="dropdown-menu">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>Copyright Purwadhika, 2016</p>
+        </footer>
+
+    </body>
+</html>

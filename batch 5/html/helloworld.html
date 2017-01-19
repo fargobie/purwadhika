@@ -1,12 +1,16 @@
 <html>
     <head>
         <title>Hello World</title>
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head> 
 
     <body>
-        <h1>Teh Botol</h1>
+        <h1 id="header">Teh Botol</h1>
+        <script type="text/javascript">
+            confirm('this is a javascript alert');
+            document.write("<h2>Hello World from javascript</h2>");
+        </script>
         <h2>Teh Botol</h2>
         <h3>Teh Botol</h3>
         <br>
@@ -23,9 +27,16 @@
             <li>Purwadhika</li>           
         </ul>
 
-        <p align="right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
+        <p align="right" id="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
             <a href="css/style.css">nascetur ridiculus mus.</a>
         </p>
-        <button class="btn btn-success btn-lg btn-block">Button</button>
+        <button class="btn btn-warning btn-lg" onclick="document.getElementById('paragraph').style.display='none'">Hide</button>
+        <button class="btn btn-success btn-lg" onclick="document.getElementById('paragraph').style.display='block'">Show</button>
+
+        <button class="btn btn-info btn-lg" onclick="document.getElementById('paragraph').innerHTML = 'Hello Javascript'">Update</button>
+
+        <button class="btn btn-info btn-lg" onclick="document.getElementById('header').style.fontSize = '80px'">Size</button>
+
+        
     </body>
 </html>
