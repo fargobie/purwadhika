@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>JQuery Class</title>
+        <script src="js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                // $('div').mouseenter(function(){
+                //     $(this).animate({
+                //         height: '+=10px'
+                //     });
+                // });
+                // $('div').mouseleave(function(){
+                //     $(this).css("background-color", "pink");
+                // });
+                // // $('div').dblclick(function(){
+                // //     $(this).toggle(10000);
+                // // });
+                // $('div').dblclick(function(){
+                //     $(this).animate({bottom:'100px'});
+                // });
+
+                $("button").click(function(){
+                    $("div").animate({
+                        left: '100px',
+                        fontSize: '3em'
+                        });
+                })
+
+            });
+        </script>
+        <style>
+        /*div {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+        }
+        #red {
+            background-color: red;
+        }
+        #blue {
+            background-color: blue;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #green {
+            background-color: green;
+        }*/
+        </style>
+    </head>
+    <body>
+        <!--<div id="red"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>-->
+
+        <button>Animate</button>
+        <div style="background:#3f3f3f;height:100px;position:absolute;width:100px;color:white;">Hello</div>
+    </body>
+</html>
