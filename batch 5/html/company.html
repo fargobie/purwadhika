@@ -1,21 +1,64 @@
 <html>
 
-  <head>
-    
-    <title>Purwadhika</title>
+<head>
 
-    <!-- include css files -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    
-    <!-- include js files -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    
-    <style>
+  <title>Purwadhika</title>
+
+  <!-- include css files -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Montserrat" rel="stylesheet">
+
+
+  <!-- include js files -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <style>
+      h1, h2 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      p {
+        font-family: 'Fira Sans Condensed', sans-serif;
+      }
       .jumbotron {
-        background-color: #006989;
+        /*background-color: #006989;*/
         color: #ffffff;
+        height: 400px;
+        padding-top: 150px;
+
+        background-image: url("img/mountain.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+      #services {
+        /*background-color: #006989;*/
+        color: #ffffff;
+        height: 200px;
+
+        background-image: url("img/forest.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      #portfolio {
+        /*background-color: #006989;*/
+        color: #ffffff;
+        height: 400px;
+
+        background-image: url("img/mountain.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
       }
       
       .bg-grey {
@@ -49,161 +92,220 @@
       .carousel-indicators li.active {
         background-color: #006989;
       }
-      /*.panel {
-        border: 1px solid #006989;
-      }
-      .panel-heading {
-        background-color: #006989;
-        color: #ffffff;
-      }
-      .panel-footer {
-        background-color: #006989;
-        color: #ffffff;
-      }*/
+      
     </style>
-  </head>
+</head>
 
-  <body>
-    <div class="jumbotron text-center">
-      <h1>Purwadhika</h1>
-      <p>Don't Quit.</p>
-      <form class="form-inline">
-        <div class="input-group"> <input type="email" name="email" class="form-control" size="50">
-          <div class="input-group-btn"> <button type="button " class="btn btn-info ">Subscribe</button> </div>
-        </div>
-      </form>
+<body>
+  <div class="jumbotron text-center">
+    <h1>Purwadhika</h1>
+    <p>Don't Quit.</p>
+    <form class="form-inline">
+      <div class="input-group"> <input type="email" name="email" class="form-control" size="50">
+        <div class="input-group-btn"> <a href="#portfolio" type="button" class="btn btn-info">Subscribe</a> </div>
+      </div>
+    </form>
+  </div>
+  <div class="container-fluid text-center" id="about-us">
+    <div class="row">
+      <div class="col-sm-6 text-justify">
+        <h2>About Purwadhika</h2>
+        <p>Purwadhika have delivered training sessions to professionals as well as public governmental and private companies,
+          both national and international such as Astra International, Astra Honda Motor, Freeport Indonesia, Total Indonesie,
+          Bank Central Asia, Citibank, TNI AL (The Indonesian Navy), DPR RI (The People’s Representatives Council), Lembaga
+          Sandi Nasional (National Crypto Agency), American Embassy, Pertamina, Bukit Asam Coal Mining, Esso Oil, and many
+          more.</p>
+        <p>What makes Purwadhika different is how we combine education and incubation into one perfect entity to equip you in
+          building a successful Startup. I believe that in order for a Startup to be successful, it must have a strong foundation
+          which is a relevant education, with the finishing touch in the right incubator to create qualified products. Trust
+          us, your decision to join us will be one of the best decisions you’ve ever made in your entire life.</p>
+        <button
+          class="btn btn-default btn-lg"> Get in Touch</button>
+      </div>
+      <div class="col-sm-6"> <span class="glyphicon glyphicon-globe logo"></span> </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>About Purwadhika</h2>
-          <p>Lorem ipsum</p>
-          <p>Lorem ipsum</p> <button class="btn btn-default btn-lg"> Get in Touch</button> </div>
-        <div class="col-sm-6"> <span class="glyphicon glyphicon-globe logo"></span> </div>
+  </div>
+  <div class="container-fluid text-center bg-grey" id="services">
+    <h2>Our Services</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <i class="fa fa-code fa-5x" aria-hidden="true"></i>
+        <h2>Learn to code</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque.
+          Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
+      </div>
+      <div class="col-sm-4">
+        <i class="fa fa-id-card-o fa-5x" aria-hidden="true"></i>
+        <h2>Learn to drive</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque.
+          Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
+      </div>
+      <div class="col-sm-4">
+        <i class="fa fa-bath fa-5x" aria-hidden="true"></i>
+        <h2>Learn to shower</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque.
+          Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
       </div>
     </div>
-    <div class="container-fluid text-center bg-grey">
-      <h2>Our Services</h2>
-      <div class="row">
-        <div class="col-sm-4"> 
-          <i class="fa fa-code fa-5x" aria-hidden="true"></i>
-          <h2>Learn to code</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque. Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
-        </div>
-        <div class="col-sm-4"> 
-          <i class="fa fa-id-card-o fa-5x" aria-hidden="true"></i>
-          <h2>Learn to drive</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque. Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
-        </div>
-        <div class="col-sm-4"> 
-          <i class="fa fa-bath fa-5x" aria-hidden="true"></i>
-          <h2>Learn to shower</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis enim ac eros rutrum aliquet eget quis neque. Donec ullamcorper vehicula quam, a efficitur odio pharetra id.</p>
+  </div>
+  <div class="container-fluid text-center" id="portfolio">
+    <h2>Portfolio</h2>
+    <h4>What we have created</h4>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/paris.jpg" alt="paris">
+          <p><strong>Paris</strong></p>
+          <p>We built Paris.</p>
         </div>
       </div>
-    </div>
-    <div class="container-fluid text-center">
-      <h2>Portfolio</h2>
-      <h4>What we have created</h4>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="thumbnail">
-            <img src="img/paris.jpg" alt="paris">
-            <p><strong>Paris</strong></p>
-            <p>We built Paris.</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="thumbnail">
-            <img src="img/newyork.jpg" alt="paris">
-            <p><strong>New York</strong></p>
-            <p>We built New York too.</p>
-          </div>
-        </div><div class="col-sm-4">
-          <div class="thumbnail">
-            <img src="img/sanfran.jpg" alt="paris">
-            <p><strong>San Fransisco</strong></p>
-            <p>We built SF.</p>
-          </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/newyork.jpg" alt="paris">
+          <p><strong>New York</strong></p>
+          <p>We built New York too.</p>
         </div>
       </div>
-    </div>
-    <div class="container-fluid text-center bg-grey">
-      <h2>What our customers say</h2>
-      <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
-          </div>
-          <div class="item">
-            <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
-          </div>
-          <div class="item">
-            <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
-          </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/sanfran.jpg" alt="paris">
+          <p><strong>San Fransisco</strong></p>
+          <p>We built SF.</p>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h3>Free</h3>
-            </div>
-            <div class="panel-body">
-              <p>2 core CPU</p>
-              <p>2 GB RAM</p>
-              <p>10GB HDD</p>
-            </div>
-            <div class="panel-footer">
-              <h3>Free</h3>
-              <p>up to 2 users</p>
-              <button class="btn btn-default">Subscribe</button>
-            </div>
+  </div>
+  <div class="container-fluid text-center bg-grey">
+    <h2>What our customers say</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
+        </div>
+        <div class="item">
+          <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
+        </div>
+        <div class="item">
+          <h4>"This company is the best!!"<br>Purwa Hartono, CEO Purwadhika</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>Free</h3>
+          </div>
+          <div class="panel-body">
+            <p>2 core CPU</p>
+            <p>2 GB RAM</p>
+            <p>10GB HDD</p>
+          </div>
+          <div class="panel-footer">
+            <h3>Free</h3>
+            <p>up to 2 users</p>
+            <button class="btn btn-default">Subscribe</button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="panel panel-primary text-center">
-            <div class="panel-heading">
-              <h3>Basic</h3>
-            </div>
-            <div class="panel-body">
-              <p>2 core CPU</p>
-              <p>2 GB RAM</p>
-              <p>10GB HDD</p>
-            </div>
-            <div class="panel-footer">
-              <h3>$20</h3>
-              <p>per month</p>
-              <button class="btn btn-primary">Subscribe</button>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary text-center">
+          <div class="panel-heading">
+            <h3>Basic</h3>
+          </div>
+          <div class="panel-body">
+            <p>2 core CPU</p>
+            <p>2 GB RAM</p>
+            <p>10GB HDD</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$20</h3>
+            <p>per month</p>
+            <button class="btn btn-primary">Subscribe</button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h3>Pro</h3>
-            </div>
-            <div class="panel-body">
-              <p>2 core CPU</p>
-              <p>2 GB RAM</p>
-              <p>10GB HDD</p>
-            </div>
-            <div class="panel-footer">
-              <h3>$100</h3>
-              <p>per month</p>
-              <button class="btn btn-default">Subscribe</button>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>Pro</h3>
+          </div>
+          <div class="panel-body">
+            <p>2 core CPU</p>
+            <p>2 GB RAM</p>
+            <p>10GB HDD</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$100</h3>
+            <p>per month</p>
+            <button class="btn btn-default">Subscribe</button>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+  <div class="container-fluid bg-grey">
+    <h2>Contact Us</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <p><span class="glyphicon glyphicon-map-marker"></span> Jakarta, Indonesia</p>
+        <p><span class="glyphicon glyphicon-phone"></span> (021) 722 2122</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> contact@purwadhika.com</p>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <textarea class="form-control" placeholder="Enter your comments here" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-success btn-block">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="googleMap" class="container-flex" style="height:400"></div>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  var myCenter = new google.maps.LatLng(-6.237234,106.814124);
+
+  function initialize() {
+    var mapProp = {
+      center: myCenter,
+      zoom: 15,
+      scrollwheel: false,
+      draggable: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+    var marker = new google.maps.Marker({
+      position: myCenter,
+    });
+    marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+</body>
 
 </html>
