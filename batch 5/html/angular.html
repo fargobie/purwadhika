@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="js/angular.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <h1>Hello {{ yourName }} !</h1>
+    </div>
+    <div class="container">
+        <div>
+            <div ng-controller="CalculatorController">
+                Enter a number:
+                <input type="number" ng-model="number">
+                <button ng-click="findSquare()">Square</button>
+                <div>{{answer}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('CalculatorController', function ($scope, Calculator) {
+
+        $scope.findSquare = function () {
+            $scope.answer = Calculator.square($scope.number);
+        }
+    });
+    myApp.service('Calculator', function () {
+        this.square = function (a) { return a * a };
+
+    });
+</script>
+
+</html>

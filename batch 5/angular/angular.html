@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="example.js"></script>
+    <style>
+        #clock {
+            text-align: center;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="MyController">
+    <div>
+        <input type="text" ng-model="myName" placeholder="Enter your name here">
+        <h1>{{ greeting }} {{ myName | uppercase }}!</h1>
+        <h3>{{ 1.2 * 30000 | currency : 'Rp ' }}</h3>
+        <h5 id="clock">{{ clock | date:'dd/MM/yyyy @ h:mm:ss' : '+0700' }}</h5>
+    </div>
+    <div>
+        <h3>Adding Machine</h3>
+        <button ng-click="add(1)">+</button>
+        <button ng-click="substract(1)">-</button>
+        <h4>count: {{ counter }}</h4>
+    </div>
+
+    <!-- ng-repeat example -->
+    <ul ng-repeat="friend in friends">
+        <h3>{{ friend.name }}</h3>
+        <p> {{ friend.address }}</p>
+    </ul>
+
+    <!-- directive -->
+    <purwadhika-directive></purwadhika-directive>
+
+    <!-- service -->
+    <div class="container">
+        <input type="number" ng-model="number">
+        <button ng-click="findSquare()">Square</button>
+        <input type="number" ng-model="result">
+        <br />
+        <br />
+    </div>
+
+</body>
+
+</html>
