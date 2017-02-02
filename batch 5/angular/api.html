@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/angular.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('searchController', function($scope, $http) {
+            $http.get('https://api.myjson.com/bins/3ozp6').then(function(response) {
+                $scope.data = response.data.search_results;
+            })
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="searchController">
+    <div>
+        <div class="col-md-4" ng-repeat="x in data">
+            <img src="{{x.listing.picture_url}}">
+            <h1>{{ x.listing.name }}</h1>
+            <p>{{ x.listing.public_address }}</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/angular.js"></script>
+    <script src="quotes.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app="quotesApp" ng-controller="randomQuote as quote">
+        <h1>Mario Teguh Generator</h1>
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <blockquote class="blockquote">
+                    <p class="mb-0">{{quote.info.line}}</p>
+                    <footer class="blockquote-footer">{{quote.info.character}}</footer>
+                </blockquote>
+                <button class="btn btn-info" ng-click="quote.pick()">Super</button>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">
+    </footer>
+</body>
+
+</html>
