@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/angular.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('eventsController', function($scope, $http) {
+            $http.get('https://api.myjson.com/bins/fj0jx').then(function(response) {
+                $scope.data = response.data;
+                $scope.events = response.data.resultsPage.results.event;
+            })
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="eventsController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                Search: <input ng-model="search" />
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-md-8 col-md-offset-2" ng-repeat="x in events | filter: search">
+                <h3>{{ x.displayName }}</h3>
+                <p>{{ x.start.date }}</p>
+                <p>{{ x.venue.displayName }}</p>
+            </div>
+        </div>-->
+        <table>
+            <tr ng-repeat="x in events | filter: search">
+                <td>{{ x.displayName }}</td>
+                <td>{{ x.start.date }}</td>
+                <td>{{ x.venue.displayName }}</td>
+
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
