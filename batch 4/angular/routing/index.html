@@ -1,21 +1,23 @@
 <html>
 
 <head>
-	<!--CSS-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-	<!--JS-->
-	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <!--JS-->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
     <script src="app.js"></script>
 
 </head>
 
 <body ng-app="routingApp">
 
-    <div><h1>Angular Routing Demo</h1></div>
-    <div class="{{pageClass}}" ng-view></div>
+    <div class="text-center">
+        <h1>Angular Routing Demo</h1>
+    </div>
+    <div class="{{pageClass}} col-md-8 col-md-offset-2 text-center" ng-view></div>
 
 
 

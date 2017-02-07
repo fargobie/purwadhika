@@ -2,7 +2,7 @@ var app = angular.module('quoteApp', []);
 app.controller('quoteController', function($scope) {
 
     $scope.quotes = [{
-            line: "Orang jujur bicaranya sederhana.",
+            line: "Orang \"jujur bicaranya sederhana.",
             author: "Mario Teguh"
         }, {
             line: "Sahabat super, jika anda ingin terlihat ganteng, bergaullah dengan orang jelek.",
@@ -30,7 +30,7 @@ app.controller('quoteController', function($scope) {
         }
     ];
 
-    $scope.display = $scope.quotes[Math.floor(Math.random() * $scope.quotes.length)];
+    $scope.display = $scope.quotes[0];
     $scope.generate = function() {
         $scope.display = $scope.quotes[Math.floor(Math.random() * $scope.quotes.length)];
     };

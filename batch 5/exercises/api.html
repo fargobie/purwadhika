@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/angular.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('searchController', function($scope, $http) {
+            $http.get('https://api.myjson.com/bins/ccrwd').then(function(response) {
+                $scope.data = response.data;
+                $scope.events = $scope.data.resultsPage.results.event;
+
+            })
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="searchController">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            Search: <input ng-model="query" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="event in events | filter: query">
+            <h1>{{ event.displayName }}</h1>
+            <p>{{ event.venue.displayName }}</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
